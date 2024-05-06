@@ -1,0 +1,46 @@
+Git is a version control system. Its uses include
+    --> Easily recover files
+    --> Who introduced an issue and when?
+    --> Roll back to previously working state
+
+
+History of VCS(Version Control Systems) :
+              ( for more information https://www.linkedin.com/learning/learning-software-version-control/the-history-of-version-control#:~:text=The%20first%20Version%20Control%20System,worked%20with%20Source%20Code%20files.)
+
+
+    --> Local VCS - stores files locally. eg. like database to keep track of files
+            pros - can track files and roll back.
+            cons - if you lose your hard disk or any way it is crashed, you lose all your data.
+
+    
+    --> Centralised VCS
+            Server-------------> Client
+    
+
+    --> Distributed VCS (Git is an example of Distributed VCS)
+            Server-------------> Client (main)
+               |
+               |
+               |----------------> Client 2 
+               |
+               |----------------> Client 3
+               |
+               |----------------> Client 4
+    
+Features of Git :
+
+    --> It keeps the snapshot and not the difference.
+    --> Almost every operation is local unless you are pushing something on the remote server.
+    --> Git has integrity, i.e. your data is well protected form changes by unwanted sources through file checksum method.
+    --> Git generally adds the data.
+
+
+
+IMPORTANT THINGS TO REMEMBER :
+
+1. REPOSITORY - It is nothing but a term given to a folder or the directory when we start tracking the files in it using git. 
+2. We can use starting words and press tab key to complete those words.
+3. Git does not track blank folders.
+4. If we just change the name of our file and not the content in it, initially, until tracked, git would think that the earlier file was deleted and a new file with a new name has been added to the working directory, which is still untracked. 
+But as soon as you add the same changed file to the staging area, git would now specify it as a renamed file, taking in account the content in it is not changed.
+5. We can also filter the commits as we want them to be. (https://youtu.be/Hxn3OguEMd4)

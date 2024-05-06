@@ -1,0 +1,174 @@
+Git installation : 
+        -----> Git command line tool 
+        -----> Git bash which is nothing but a terminal program just like windows poweshell. This terminal is linux based.
+
+
+Some linux commands :
+    --> pwd (present working directory) - returns the location where git directory is present
+    --> cd (change directory)           - changes the directory to a specified location
+
+
+Now you are all set to go.
+
+
+NOTE : You can open your desired folder in Git bash by right clicking in the folder and choose "Git bash here". 
+
+
+Setting your name and email in git :
+    $ git config --global user.name "Ayush"
+    $ git config --global user.email "fragfrankayushg5@gmail.com"
+
+
+Some git commands :
+
+
+
+    --> Shift + Insert                      :   Used to paste something in the terminal.
+
+    --> $ git config user.name              :   This will show you the user's name 
+
+    --> $ git config user.email             :   This will show you the user's email
+
+    --> $ cwd (present working directory)   :   Returns the location where git directory is present.
+
+    --> $ cd (change directory)             :   Changes the directory to a specified location.
+
+    --> $ ls                                :   This will list the contents of the current directory.
+
+    --> $ git config --list                 :   This will show all the configuration details like name, email.
+
+
+    --> $ git status                        :   It will check if the present working directory is a git repository or not.
+                                                If the present working directory isn't a git resository it will show - 
+                                                (fatal: not a git repository (or any of the parent directories): .git)
+
+    --> $ git init                          :   This will make the current working directory as a git repository.
+                                                (Initialized empty Git repository in D:/Git/Git tutorials/.git/)           
+
+    --> $ git add --a                       :   This will add all your files into the staging area.
+                                                (Now check the status) --> There would be some changes to be committed.
+
+    --> $ git add file_name.extension       :   This will only add the specified object into the staging area. The specified file name
+                                                should be given with the extension.
+
+    --> $ git commit -m "message"           :   This will commit all the files.
+
+    --> $ git log                           :   This will show us all our commits. After seeing all the logs press 'q' to come out of 
+                                                the commit details.
+
+
+    --> $ rm -rf .git                       :   This will delete the entire git repository.
+
+    --> $ git clone URL foldername          :   This will pull the data from the respective URL and save it into respective folder.
+
+
+    --> $ touch error.log                   :   Touch command is used to create a blank file from terminal into the repository.
+                                                Here for example it has created a file named error having "log" as extension. 
+
+    --> $ touch .gitignore                  :   This is a special file which stops unwanted files to appear in our project or program.
+                                                e.g. Here the error.log file can be removed by specifying its name in the (.gitignore)
+
+        NOTE :  To remove multiple unwanted files from the repository, we can write *.extension to remove all the files with this
+                particular extension in the present working directory.
+                We can also ignore another directory withing a directory, just write " directory_name/ " in the .gitignore file. This will ignore all the directories with that name irrespective of where they are present.
+                But if you write it like this " /directory_name_ " this will ignore only the outer directories with that name.
+
+    --> $ git diff                          :   This shows the difference between staging area and working directory.
+                                                Basically it shows the change.
+
+    --> $ git diff --staged                 :   This shows the difference between staging area and the last commit.
+
+    --> $ git commit -a -m "direct commit"  :   This will directly commit all the modified files which are being tracked before. 
+                                                For untracked files, this will not work.
+
+    --> $ git rm file_name.extension        :   This command will remove the specified file from the working directory and also 
+                                                stage   this change.
+
+    --> $ git mv name.txt renamed.txt:      :   This command will rename the file and also stage the change.
+
+    --> $ git rm --cached name.extension    :   This command will untrack the file. 
+
+    --> $ git log -p -3                     :   This command will show the difference and changes in all the specified commits that
+                                                have taken place. If no number is specified after the command like -3 or -4
+                                                by default only the latest commit and the changes in it would be shown.
+
+    --> $ git log --pretty=oneline          :   This command will show all the commits in one line.
+
+    --> $ git log --pretty=short            :   This command only shows important details like the author of the commit and the commit
+                                                message.
+
+    --> $ git log --pretty=full             :   This command will give you a significant amount of details about the commits.
+
+    --> $ git log --since=2.days            :   This will show the commits which are done only in the last two days or specified days.
+
+    --> $ git commit --amend                :   If you have made a change in your repository and want the change to be commited in any
+                                                of the previous commit, you can do that with the help of this command. A terminal will be open as soon as you type the command, in that press 'i' to start typing and change the previous copy of that file. To exit the terminal press (esc + ':' and then type wq in it, press enter then). Your desired commit would be amended.
+
+    --> $ git restore --staged file_name    :   This is used to unstage the files.
+
+    --> $ git restore -- filename.extension :   The command will make the file as it was in the last commit. It should be used wisely 
+                                                as once data lost cannot be recovered.
+
+    --> $ git checkout -f                   :   This command is used to ignore all the modification and changes, and step back to our
+                                                last commit that we did. It also should be used wisely.
+
+    --> $ git remote                        :   A remote is a website or a repository which is on the Internet. Here the website is
+                                                "Github". Git is nothing but a website which hosts the git repository.
+
+    
+    --> $ git remote add origin https://github.com/ayush3011/GitTutorialDemo.git 
+
+                                            :   By this command we tend to push our files into the repository or the website whose name
+                                                is specified, and the website goes by the name of origin. Origin is a remote. We can also change the name of the website but naming it as origin is a good practice everybody do that. 
+                
+    --> $ git remote -v                     :   After you write this command, the Gitbash terminal will show you the two URL's, the one 
+                                                to push and the other one to pull our files from the remote repository.
+
+
+
+                                                <--- Creating an SSH Key --->
+
+You can access and write data in repositories on GitHub.com using SSH (Secure Shell Protocol). When you connect via SSH, you
+authenticate using a private key file on your local machine. 
+(https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+
+
+    --> $ git push -u origin master             :   This command will push our files on the remote repository on Github.
+
+    --> $ git config --global alias.st status   :   Basically by this command, we can shorten our other commands or create short
+                                                    names for our original commands. Here we can use st also in the place of status.
+                                                    other example can be - $ git config --global alias.last 'log -p -1'
+                                                    This will show me the last commit every time I write git last.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+    
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
